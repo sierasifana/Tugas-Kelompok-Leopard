@@ -1,5 +1,4 @@
 # Program Suara Hewan Leopard
-# Kelompok Leopard
 
 # Kelas induk
 class Hewan:
@@ -7,32 +6,31 @@ class Hewan:
         self.nama = nama
 
     def bersuara(self):
-        print(f"{self.nama} mengeluarkan suara hewan.")
+        print(f"{self.nama} mengeluarkan suara umum hewan.")
 
 
 # Kelas anak Leopard
 class Leopard(Hewan):
-    def __init__(self, nama, habitat):
+    def __init__(self, nama):
         super().__init__(nama)
-        self.habitat = habitat
 
     def bersuara(self):
         print(f"{self.nama} mengeluarkan suara: Grrrawww!")
 
     def info_tambahan(self):
-        print(f"{self.nama} hidup di habitat {self.habitat}.")
+        print(f"{self.nama} adalah seekor leopard.")
 
 
-# Fungsi interaksi dengan leopard
-def interaksi_dengan_hewan(hewan):
-    print(f"Berinteraksi dengan {hewan.nama}:")
-    hewan.bersuara()
-    hewan.info_tambahan()
-    print("-" * 30)
+# Fungsi interaksi dengan hewan
+def interaksi_dengan_hewan(hewan_objek):
+    print(f"Berinteraksi dengan {hewan_objek.nama}:")
+    hewan_objek.bersuara()
+    hewan_objek.info_tambahan()
+    print("-" * 20)
 
 
 # Membuat objek leopard
-leo = Leopard("Leo", "hutan dan padang rumput")
+leo = Leopard("Leo")
 
 # Menjalankan program
 interaksi_dengan_hewan(leo)
