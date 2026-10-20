@@ -1,5 +1,4 @@
 # Program Suara Hewan Leopard
-
 # Kelas induk
 class Hewan:
     def __init__(self, nama):
